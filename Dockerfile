@@ -1,8 +1,6 @@
 FROM mcr.microsoft.com/playwright/mcp
 
-ENV PLAYWRIGHT_MCP_HEADLESS=true
-ENV PLAYWRIGHT_MCP_NO_SANDBOX=true
+ENV PLAYWRIGHT_MCP_PORT=8931
+ENV PLAYWRIGHT_MCP_HOST=0.0.0.0
 
 EXPOSE 8931
-
-CMD ["node", "/app/cli.js", "--headless", "--browser", "chromium", "--no-sandbox", "--port", "8931", "--host", "0.0.0.0"]
